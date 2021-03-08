@@ -221,9 +221,9 @@ namespace alchemist {
 			if (args && args->numArgs && args->numArgs > 0) {
 				string craft_description = *(args->args[0].data.managedString);
 				if (craft_description.find("Alchemy") != string::npos && g_thePlayer) {
-					//time_t start = time(NULL);
+					//time_t start = time(NULL); //testing only
 					initAlchemist();
-					//stressTest();
+					//stressTest(); //testing only
 					if (ingredients != lastIngredientList || player.state != player.lastState) {
 						costliestPotion = Potion(0, "No potion recipes are currently available.");
 						lastIngredientList = set<Ingredient>(ingredients);
@@ -231,9 +231,9 @@ namespace alchemist {
 						makePotions();
 					}
 					alchemist_result = costliestPotion.description;
-					//time_t end = time(NULL);
-					//_LOG(str::fromInt(end - start) + " seconds");
-					//_LOG(str::fromInt(ingredients.size()) + " ingredients");
+					//time_t end = time(NULL); //testing only
+					//_LOG(str::fromInt(end - start) + " seconds"); //testing only
+					//_LOG(str::fromInt(ingredients.size()) + " ingredients"); //testing only
 				}
 			}
 			if (args && args->result) {

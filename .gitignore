@@ -20,3 +20,4 @@
 *.iobj
 *.ipdb
 *.vcxproj.FileListAbsolute.txt
+*.recipe
